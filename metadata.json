@@ -1,0 +1,6 @@
+{
+  "name": "Math Dash: Ultimate Race",
+  "description": "A 3D educational racing game for Form 1 Malaysian students covering Ratios, Rates, Proportions, and Estimation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
