@@ -317,7 +317,7 @@ export default function App() {
             setCurrentQuestion(q);
             currentQuestionRef.current = q;
             questionStartTimeRef.current = Date.now();
-            setQuestionTimeLeft(10);
+            setQuestionTimeLeft(15);
 
             // Spawn Question Portal 125m ahead (giving clean, unobstructed highway approach)
             scene.spawnQuestionGate(currentZ - 125, q);
@@ -450,7 +450,7 @@ export default function App() {
     setHistory([]);
     setCurrentQuestion(null);
     currentQuestionRef.current = null;
-    setQuestionTimeLeft(10);
+    setQuestionTimeLeft(15);
     lastSpawnZRef.current = 0;
     nextQuestionSpawnZRef.current = -50;
     nextQuestionAvailableTimeRef.current = Date.now() + 4000; // 4s opening run before first question
