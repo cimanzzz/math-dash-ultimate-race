@@ -49,7 +49,7 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
           <h2 className="text-3xl md:text-5xl font-black font-racing uppercase tracking-tight text-white">
             {isCompleted ? (
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
-                TAHNIAH! SEMUA 10 SOALAN SELESAI
+                TAHNIAH! SEMUA 12 SOALAN SELESAI
               </span>
             ) : isTimeOut ? (
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">
