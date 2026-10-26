@@ -12,7 +12,7 @@ const INITIAL_STATS: GameStats = {
   coins: 0,
   lives: 5,
   maxLives: 5,
-  timeLeft: 90, // Generous 90s race time to complete 10 questions comfortably
+  timeLeft: 300, // Generous 300s race time to complete 12 questions comfortably
   distance: 0,
   speedKmH: 0,
   comboStreak: 1,
