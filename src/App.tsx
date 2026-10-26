@@ -151,7 +151,7 @@ export default function App() {
     }
 
     // Check if player completed all 10 questions
-    if (currentStats.questionsAnswered + 1 >= 10) {
+    if (currentStats.questionsAnswered + 1 >= 12) {
       setTimeout(() => {
         triggerGameOver();
       }, 1000);
