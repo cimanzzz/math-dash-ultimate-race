@@ -32,7 +32,7 @@ export default function App() {
   const [stats, setStats] = useState<GameStats>(INITIAL_STATS);
   const [history, setHistory] = useState<AnsweredQuestion[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState<MathQuestion | null>(null);
-  const [questionTimeLeft, setQuestionTimeLeft] = useState<number>(10);
+  const [questionTimeLeft, setQuestionTimeLeft] = useState<number>(15);
   const [highScore, setHighScore] = useState<number>(0);
   const [isMuted, setIsMuted] = useState<boolean>(soundManager.getMuted());
   const [isPaused, setIsPaused] = useState<boolean>(false);
@@ -105,7 +105,7 @@ export default function App() {
         question: q,
         selectedOptionIndex: isTimeout ? -1 : chosenLane,
         isCorrect,
-        timeSpentSeconds: isTimeout ? 10 : Math.max(1, Math.round((Date.now() - questionStartTimeRef.current) / 1000)),
+        timeSpentSeconds: isTimeout ? 15 : Math.max(1, Math.round((Date.now() - questionStartTimeRef.current) / 1000)),
       },
     ]);
 
@@ -162,7 +162,7 @@ export default function App() {
     sceneRef.current?.removeActiveGate();
     setCurrentQuestion(null);
     currentQuestionRef.current = null;
-    setQuestionTimeLeft(10);
+    setQuestionTimeLeft(15);
     nextQuestionAvailableTimeRef.current = Date.now() + 8000; // 8-second free racing gap!
     if (sceneRef.current) {
       lastSpawnZRef.current = sceneRef.current.carZ;
@@ -290,11 +290,11 @@ export default function App() {
         // Update 10-second question answering timer if a question is active
         if (currentQuestionRef.current) {
           const elapsed = (Date.now() - questionStartTimeRef.current) / 1000;
-          const remaining = Math.max(0, 10 - elapsed);
+          const remaining = Math.max(0, 15 - elapsed);
           setQuestionTimeLeft(remaining);
 
           if (remaining <= 0) {
-            handleAnswer(-1, true); // 10 seconds expired!
+            handleAnswer(-1, true); // 15 seconds expired!
           }
         }
 
